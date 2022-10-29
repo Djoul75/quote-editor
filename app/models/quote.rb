@@ -8,4 +8,5 @@ class Quote < ApplicationRecord
   # les 3 attributs savent que c'est "quote" dont on parle comme on est dans le model "Quote"
   after_create_commit -> { broadcast_prepend_to "quotes", partial: "quotes/quote", locals: { quote: self }, target: "quotes" }
 
+  after_update_commit -> { broadcast_prepend_to "quotes" }
 end
