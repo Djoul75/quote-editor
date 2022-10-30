@@ -1,7 +1,7 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+# 2 Companies test :
 
-one:
-  name: MyString
+kpmg:
+  name: KPMG
 
-two:
-  name: MyString
+pwc:
+  name: PwC
