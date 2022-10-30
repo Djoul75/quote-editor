@@ -18,5 +18,5 @@ class Quote < ApplicationRecord
   ## after_destroy_commit -> { broadcast_remove_to "quotes" }
 
   # Ces trois méthodes sont codées par rails avec une seule ligne
-  broadcasts_to ->(quote) { "quotes" }, inserts_by: :prepend
+  broadcasts_to ->(quote) { [quote.company, "quotes"] }, inserts_by: :prepend
 end
